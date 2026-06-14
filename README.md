@@ -14,7 +14,9 @@
   <img src="https://github-readme-stats.vercel.app/api?username=ItsWanheda&show_icons=true&theme=radical&hide_border=true" height="160" />
 </p>
 
-![Preview](./src/img/Preloader-Preview.png)
+<p align="center">
+  <img src="./src/img/Preloader-Preview.png" alt="Hacker-ish Style Preloader Preview" />
+</p>
 
 ---
 
