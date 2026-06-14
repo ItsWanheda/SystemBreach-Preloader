@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Breach Preloader</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Preloader Overlay -->
+    <div id="preloader" class="preloader-overlay">
+        <div class="scanline"></div>
+        <div class="noise"></div>
+        <div class="bg-grid"></div>
+        
+        <div class="loader-content">
+            <!-- Header -->
+            <div class="header-line">
+                <div class="left-header">
+                    <span class="status-label">SYS.STATUS:</span>
+                    <span id="status-text" class="status-value">INITIALIZING</span>
+                </div>
+                <div class="right-header">
+                    <span class="threat-label">THREAT LEVEL:</span>
+                    <span id="threat-level" class="threat-value">LOW</span>
+                </div>
+            </div>
+
+            <!-- Main Display -->
+            <div class="main-display">
+                <h1 id="glitch-title" class="glitch" data-text="SYSTEM_BREACH">SYSTEM_BREACH</h1>
+                <div class="terminal-output">
+                    <p><span class="prompt">></span> <span id="typing-text"></span><span class="cursor">_</span></p>
+                    <p class="sub-text" id="sub-text">ESTABLISHING SECURE CONNECTION...</p>
+                </div>
+            </div>
+
+            <!-- Progress -->
+            <div class="progress-container">
+                <div class="progress-bar-bg">
+                    <div id="progress-bar" class="progress-bar-fill"></div>
+                </div>
+                <div class="progress-stats">
+                    <span id="percent-text">0%</span>
+                    <span class="hex-code" id="hex-code">0x0000</span>
+                </div>
+            </div>
+
+            <!-- Skip Button -->
+            <div class="skip-container" id="skip-container">
+                <button id="skip-btn" class="skip-btn">SKIP [ENTER]</button>
+            </div>
+        </div>
+
+        <!-- Signature -->
+        <div class="signature">
+            <span class="sig-bracket">[</span> ItsWanheda <span class="sig-bracket">]</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content">
+        <h1>Welcome to the System</h1>
+        <p>Access granted. The preloader has completed.</p>
+    </main>
+
+    <script src="./static/main.js"></script>
+</body>
+</html>
