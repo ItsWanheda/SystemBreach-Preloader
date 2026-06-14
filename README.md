@@ -11,13 +11,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/ItsWanheda/preloader?style=flat-square" />
-  <img src="https://img.shields.io/github/last-commit/ItsWanheda/preloader?style=flat-square" />
-  <img src="https://img.shields.io/github/repo-size/ItsWanheda/preloader?style=flat-square" />
-  <img src="https://img.shields.io/github/languages/top/ItsWanheda/preloader?style=flat-square" />
-</p>
-
-<p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ItsWanheda&show_icons=true&theme=radical&hide_border=true" height="160" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ItsWanheda&layout=compact&theme=radical&hide_border=true" height="160" />
 </p>
