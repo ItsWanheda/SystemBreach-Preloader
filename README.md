@@ -45,14 +45,6 @@
 
 ---
 
-## 🚀 Live Demo
-
-[View the live demo here](#)
-
-> Replace the link above with your GitHub Pages URL.
-
----
-
 ## 🛠️ Installation
 
 ### 1. Clone the repository
