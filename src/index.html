@@ -4,13 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System Breach Preloader</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../src/data/manifest.json">
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ff003c">
+    <meta name="msapplication-navbutton-color" content="#ff003c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100'/><text y='.9em' font-size='90' fill='%23ff003c'>></text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100'/><text y='.9em' font-size='90' fill='%23ff003c'>></text></svg>">
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../src/styles/styles.css">
 </head>
 <body>
-
     <!-- Preloader Overlay -->
     <div id="preloader" class="preloader-overlay">
         <div class="scanline"></div>
@@ -34,8 +49,8 @@
             <div class="main-display">
                 <h1 id="glitch-title" class="glitch" data-text="SYSTEM_BREACH">SYSTEM_BREACH</h1>
                 <div class="terminal-output">
-                    <p><span class="prompt">></span> <span id="typing-text"></span><span class="cursor">_</span></p>
-                    <p class="sub-text" id="sub-text">ESTABLISHING SECURE CONNECTION...</p>
+                    <p><span class="prompt">></span> <span id="typing-text">INITIALIZING KERNEL...</span><span class="cursor">_</span></p>
+                    <p class="sub-text">ESTABLISHING SECURE CONNECTION...</p>
                 </div>
             </div>
 
@@ -68,6 +83,7 @@
         <p>Access granted. The preloader has completed.</p>
     </main>
 
-    <script src="./static/main.js"></script>
+    <!-- Scripts -->
+    <script src="../src/static/main.js"></script>
 </body>
 </html>
