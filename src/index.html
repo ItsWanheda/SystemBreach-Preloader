@@ -1,73 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="matrix">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>System Breach Preloader</title>
-    <link rel="stylesheet" href="./styles/styles.css">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="../src/data/manifest.json">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#ff003c">
+    <meta name="msapplication-navbutton-color" content="#ff003c">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon -->
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100'/><text y='.9em' font-size='90' fill='%23ff003c'>></text></svg>">
+    <link rel="apple-touch-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23050505' width='100' height='100'/><text y='.9em' font-size='90' fill='%23ff003c'>></text></svg>">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../src/styles/styles.css">
 </head>
+
 <body>
 
     <!-- Preloader Overlay -->
-    <div id="preloader" class="preloader-overlay">
-        <div class="scanline"></div>
-        <div class="noise"></div>
-        <div class="bg-grid"></div>
-        
+    <!-- Role: alert for screen readers, aria-live for updates -->
+    <div id="preloader" class="preloader-overlay" role="alertdialog" aria-modal="true" aria-labelledby="glitch-title"
+        aria-describedby="loading-description" aria-live="polite" data-cursor="default">
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="noise" aria-hidden="true"></div>
+        <div class="bg-grid" aria-hidden="true"></div>
+
         <div class="loader-content">
             <!-- Header -->
-            <div class="header-line">
+            <!-- Grid layout for proper screen reader reading -->
+            <div class="header-line" role="status" aria-label="System status information">
                 <div class="left-header">
-                    <span class="status-label">SYS.STATUS:</span>
-                    <span id="status-text" class="status-value">INITIALIZING</span>
+                    <span class="status-label" id="status-label">SYS.STATUS:</span>
+                    <span id="status-text" class="status-value" aria-labelledby="status-label">INITIALIZING</span>
                 </div>
                 <div class="right-header">
-                    <span class="threat-label">THREAT LEVEL:</span>
-                    <span id="threat-level" class="threat-value">LOW</span>
+                    <span class="threat-label" id="threat-label">THREAT LEVEL:</span>
+                    <span id="threat-level" class="threat-value" aria-labelledby="threat-label" role="status">LOW</span>
                 </div>
             </div>
 
             <!-- Main Display -->
             <div class="main-display">
-                <h1 id="glitch-title" class="glitch" data-text="SYSTEM_BREACH">SYSTEM_BREACH</h1>
+                <!-- Heading for screen readers -->
+                <h1 id="glitch-title" class="glitch" data-text="SYSTEM_BREACH"
+                    aria-label="System Breach - Loading in progress">SYSTEM_BREACH</h1>
+
+                <!-- Hidden description for screen readers -->
+                <p id="loading-description" class="sr-only">
+                    Loading in progress. Current status: Initializing kernel.
+                    Use Skip button or press Enter or Escape to skip.
+                </p>
+
                 <div class="terminal-output">
-                    <p><span class="prompt">></span> <span id="typing-text"></span><span class="cursor">_</span></p>
-                    <p class="sub-text" id="sub-text">ESTABLISHING SECURE CONNECTION...</p>
+                    <p>
+                        <span class="prompt" aria-hidden="true">></span>
+                        <span id="typing-text" aria-live="polite" aria-atomic="false">INITIALIZING KERNEL...</span>
+                        <span class="cursor" aria-hidden="true">_</span>
+                    </p>
+                    <p class="sub-text">ESTABLISHING SECURE CONNECTION...</p>
                 </div>
             </div>
 
             <!-- Progress -->
-            <div class="progress-container">
+            <div class="progress-container" role="progressbar" aria-label="Loading progress">
                 <div class="progress-bar-bg">
-                    <div id="progress-bar" class="progress-bar-fill"></div>
+                    <div id="progress-bar" class="progress-bar-fill" role="presentation" aria-hidden="true"></div>
                 </div>
-                <div class="progress-stats">
-                    <span id="percent-text">0%</span>
+                <div class="progress-stats" aria-live="off">
+                    <span id="percent-text" aria-live="polite">0%</span>
                     <span class="hex-code" id="hex-code">0x0000</span>
                 </div>
             </div>
 
             <!-- Skip Button -->
             <div class="skip-container" id="skip-container">
-                <button id="skip-btn" class="skip-btn">SKIP [ENTER]</button>
+                <button id="skip-btn" class="skip-btn" type="button"
+                    aria-label="Skip loading animation. Shortcut: Enter or Escape" aria-describedby="skip-hint">
+                    SKIP [ENTER]
+                </button>
+                <span id="skip-hint" class="sr-only">
+                    Press Enter or Escape to skip the loading animation
+                </span>
             </div>
         </div>
 
         <!-- Signature -->
-        <div class="signature">
+        <div class="signature" aria-hidden="true">
             <span class="sig-bracket">[</span> ItsWanheda <span class="sig-bracket">]</span>
         </div>
     </div>
 
     <!-- Main Content -->
-    <main id="main-content" class="main-content">
+    <main id="main-content" class="main-content" role="main" aria-label="Main content">
         <h1>Welcome to the System</h1>
         <p>Access granted. The preloader has completed.</p>
     </main>
 
-    <script src="./static/main.js"></script>
+    <!-- Scripts -->
+    <script src="../src/static/main.js"></script>
 </body>
+
 </html>
