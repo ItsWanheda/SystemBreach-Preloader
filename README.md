@@ -45,7 +45,8 @@
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YourUsername/preloader.git
+git clone https://github.com/ItsWanheda/SystemBreach-Preloader.git
+cd SystemBreach-Preloader
 ```
 ### 2. Open the project
 **Open index.html in your browser.**
@@ -54,7 +55,7 @@ git clone https://github.com/YourUsername/preloader.git
 
 ## 📂 Project Structure
 ```text
-preloader/
+SystemBreach-Preloader/
 ├── src/
 │   ├── index.html
 │   ├── img/
@@ -89,7 +90,7 @@ preloader/
 ## 👤 Author
 
 **ItsWanheda**
-**GitHub: ItsWanheda**
+**GitHub:[ItsWanheda](https://github.com/ItsWanheda)**
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ItsWanheda&show_icons=true&theme=radical&hide_border=true" height="160" />
 </p>
